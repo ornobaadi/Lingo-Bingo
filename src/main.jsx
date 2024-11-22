@@ -8,6 +8,8 @@ import Home from './components/Home.jsx'
 import Learn from './components/Learn.jsx'
 import Tutorial from './components/Tutorial.jsx'
 import About from './components/About.jsx'
+import Login from './components/Login.jsx'
+import Signup from './components/Signup.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About></About>
+      },
+      {
+        path: 'login',
+        element: <Login></Login>
+      },
+      {
+        path: 'signup',
+        element: <Signup></Signup>
       },
     ]
   }
