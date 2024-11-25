@@ -3,7 +3,10 @@ import Home from "../layouts/Home";
 import Root from "../components/Root";
 import Error from "../components/Error";
 import Learn from "../layouts/Learn";
-import Lesson from "../components/Lesson";
+import Lesson from "../pages/Lesson";
+import AuthLayout from "../layouts/AuthLayout";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
 
 const router = createBrowserRouter([
     {
@@ -33,7 +36,17 @@ const router = createBrowserRouter([
             },
             {
                 path: '/auth',
-                element: <h1>Login</h1>,
+                element: <AuthLayout></AuthLayout>,
+                children: [
+                    {
+                        path: '/auth/login',
+                        element: <Login></Login>,
+                    },
+                    {
+                        path: '/auth/signup',
+                        element: <Signup></Signup>,
+                    },
+                ]
             },
         ],
     },

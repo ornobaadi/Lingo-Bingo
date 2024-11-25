@@ -49,7 +49,7 @@ const Navbar = () => {
                         <span>A</span>
                     </div>
                 </div>
-                <NavLink to='/auth/login'><a className="btn btn-sm md:btn-md btn-outline rounded-full px-5 md:px-10">Login</a></NavLink>
+                <Link to='/auth/login'><a className="btn btn-sm md:btn-md btn-outline rounded-full px-5 md:px-10">Login</a></Link>
             </div>
         </div>
     );

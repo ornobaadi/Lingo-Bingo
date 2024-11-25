@@ -1,6 +1,6 @@
 <div align="center">
   <video
-      src="/Language.mp4"
+      src="public/Language.mp4"
       autoPlay
       loop
       muted
