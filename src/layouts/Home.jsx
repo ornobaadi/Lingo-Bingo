@@ -1,32 +1,33 @@
 import { Link } from "react-router-dom";
+import { FaBookOpen, FaLanguage, FaPlayCircle, FaUsers } from "react-icons/fa";
 import CountUp from "react-countup";
-import { FaLanguage, FaUsers, FaBookOpen, FaPlayCircle } from "react-icons/fa";
 
 const Home = () => {
     return (
-        <>
-            <div className="hero bg-[#FAFAFA] min-h-[600px]">
-                <div className="hero-content text-center">
-                    <div className="max-w-2xl">
-                        <video
-                            src="/Language.mp4"
-                            autoPlay
-                            loop
-                            muted
-                            className="w-full mb-5 rounded-lg"
-                        />
-                        <h1 className="text-2xl md:text-5xl py-10 font-bold leading-snug">The best way to learn or practice a language</h1>
-                        {/* <p className="py-5">
+        <div className="container mx-auto ">
+            <section>
+                <div className="hero bg-[#FAFAFA] min-h-[600px]">
+                    <div className="hero-content text-center">
+                        <div className="max-w-2xl">
+                            <video
+                                src="/Language.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                className="w-full mb-5 rounded-lg"
+                            />
+                            <h1 className="text-2xl md:text-5xl py-10 font-bold leading-snug">The best way to learn or practice a language</h1>
+                            {/* <p className="py-5">
                         Speak a new language, unlock a new world
                     </p> */}
-                        <div className="space-x-5">
-                            <Link to='/learn'><button className="btn btn-neutral hover:bg-gray-800 rounded-full px-10 mb-20">Start Learning</button></Link>
-                            {/* <button className="btn btn-outline rounded-full px-10">Explore</button> */}
+                            <div className="space-x-5">
+                                <Link to='/learn'><button className="btn btn-neutral hover:bg-gray-800 rounded-full px-10 mb-10">Start Learning</button></Link>
+                                {/* <button className="btn btn-outline rounded-full px-10">Explore</button> */}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            {/* About  */}
+            </section>
             <section className="py-10 px-5 md:px-20 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-5">About Us</h2>
                 <p className="text-gray-600 text-lg leading-relaxed">
@@ -34,11 +35,10 @@ const Home = () => {
                     Through engaging lessons, interactive tutorials, and practice sessions, learning a language becomes both fun and effective.
                 </p>
             </section>
-
             {/* Stats  */}
             <section className="py-10 bg-gray-100 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-5">Our Success So Far</h2>
-                <div className="flex justify-around  gap-10">
+                <div className="flex justify-around flex-col md:flex-row  gap-10">
                     <div className="stat flex flex-col items-center">
                         <FaUsers className="text-5xl text-primary mb-3" />
                         <p className="stat-title">Users</p>
@@ -69,8 +69,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-        </>
-
+        </div>
     );
 };
 

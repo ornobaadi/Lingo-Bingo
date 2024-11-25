@@ -43,8 +43,13 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <NavLink to='/login'><a className="btn btn-sm md:btn-md btn-outline rounded-full px-5 md:px-10">Login</a></NavLink>
+            <div className="navbar-end gap-2">
+                <div className="avatar placeholder">
+                    <div className="bg-neutral text-neutral-content w-12 rounded-full">
+                        <span>A</span>
+                    </div>
+                </div>
+                <NavLink to='/auth/login'><a className="btn btn-sm md:btn-md btn-outline rounded-full px-5 md:px-10">Login</a></NavLink>
             </div>
         </div>
     );
