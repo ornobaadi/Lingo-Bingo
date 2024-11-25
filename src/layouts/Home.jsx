@@ -9,13 +9,7 @@ const Home = () => {
                 <div className="hero bg-[#FAFAFA] min-h-[600px]">
                     <div className="hero-content text-center">
                         <div className="max-w-2xl">
-                            <video
-                                src="/Language.mp4"
-                                autoPlay
-                                loop
-                                muted
-                                className="w-full mb-5 rounded-lg"
-                            />
+                            <img src="public/Language.gif" alt="" />
                             <h1 className="text-2xl md:text-5xl py-10 font-bold leading-snug">The best way to learn or practice a language</h1>
                             {/* <p className="py-5">
                         Speak a new language, unlock a new world

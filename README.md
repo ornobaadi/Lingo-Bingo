@@ -1,10 +1,5 @@
 <div align="center">
-  <video
-      src="public/Language.mp4"
-      autoPlay
-      loop
-      muted
-    />
+  <img src="public/Language.gif" alt="Lingo Bingo Logo">
 </div>
 
 
