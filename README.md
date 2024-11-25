@@ -1,6 +1,11 @@
-<p align="center">
-  <img src="public/banner.jpg" alt="Lingo Bingo Logo">
-</p>
+<div align="center">
+  <video
+      src="/Language.mp4"
+      autoPlay
+      loop
+      muted
+    />
+</div>
 
 
 # 🌟 Lingo Bingo: A Vocabulary Learning Application 🌟
