@@ -4,7 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
 
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const links = (
         <>
@@ -40,9 +40,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                
+
                 <Link to='/'><a className="btn p-0 btn-ghost text-md md:text-xl">
-                <img className="w-10" src="/Bonjour.png" alt="" />Lingo Bingo</a></Link>
+                    <img className="w-10" src="/Bonjour.png" alt="" />Lingo Bingo</a></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-5">
@@ -50,17 +50,32 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-2">
-                <div className="font-semibold text-error">{user && user.email}</div>
 
                 {
-                    user && user?.email ? 
-                    <button onClick={logOut} className="btn btn-sm md:btn-md btn-outline rounded-box px-5 md:px-10">Logout</button> 
-                    : 
-                    <Link to='/auth/login'><a className="btn btn-sm md:btn-md btn-outline rounded-box px-5 md:px-10">Login</a></Link>
+                    user && user?.email ?
+                        <div className="flex flex-col items-center">
+                            <img className="w-12 h-12 object-cover rounded-full" src={user?.photoURL} alt="" />
+                            <p className="font-semibold">{user.displayName}</p>
+                        </div>
+                        :
+                        <div className="avatar">
+                            <div className="">
+                            
+                            </div>
+                        </div>
+                }
+
+                {/* <h2 className="font-semibold text-error">{user && user.email}</h2> */}
+
+                {
+                    user && user?.email ?
+                        <button onClick={logOut} className="btn btn-sm md:btn-md btn-outline rounded-box px-5 md:px-10">Logout</button>
+                        :
+                        <Link to='/auth/login'><a className="btn btn-sm md:btn-md btn-outline rounded-box px-5 md:px-10">Login</a></Link>
                 }
 
 
-                
+
             </div>
         </div>
     );
