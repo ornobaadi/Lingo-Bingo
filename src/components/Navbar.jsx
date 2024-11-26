@@ -40,8 +40,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <img className="w-10" src="/Bonjour.png" alt="" />
-                <Link to='/'><a className="btn btn-ghost text-md md:text-xl">Lingo Bingo</a></Link>
+                
+                <Link to='/'><a className="btn btn-ghost text-md md:text-xl">
+                <img className="w-10" src="/Bonjour.png" alt="" />Lingo Bingo</a></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-5">
@@ -50,8 +51,6 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-2">
                 <div className="font-semibold text-error">{user && user.email}</div>
-
-                
 
                 {
                     user && user?.email ? 
