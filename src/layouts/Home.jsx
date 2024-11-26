@@ -19,7 +19,7 @@ const Home = () => {
                         Speak a new language, unlock a new world
                     </p> */}
                             <div className="space-x-5">
-                                <Link to='/learn'><button className="btn btn-neutral hover:bg-gray-800 rounded-full px-10 mb-10">Start Learning</button></Link>
+                                <Link to='/learn'><button className="btn btn-neutral hover:bg-gray-800 rounded-box px-10 mb-10">Start Learning</button></Link>
                                 {/* <button className="btn btn-outline rounded-full px-10">Explore</button> */}
                             </div>
                         </div>

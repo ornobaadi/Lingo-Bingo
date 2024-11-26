@@ -24,7 +24,7 @@ const Learn = () => {
                     }}
                 />
             </h1>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {lessons.map((lesson) => (
                     <div
@@ -34,7 +34,7 @@ const Learn = () => {
                     >
                         <div className="flex items-start justify-between mb-4">
                             <div className="p-2 bg-emerald-50 rounded-lg">
-                            <span className="text-emerald-500 font-bold text-xl">
+                                <span className="text-emerald-500 font-bold text-xl">
                                     {lesson.id}
                                 </span>
                             </div>

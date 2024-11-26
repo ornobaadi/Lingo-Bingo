@@ -56,26 +56,30 @@ const Tutorial = () => {
     ];
 
     return (
-        <div className="min-h-screen p-10">
-            <h1 className="text-4xl font-bold text-center mb-8">Learn German - Video Tutorials</h1>
+        <div className="min-h-screen p-6 lg:p-10">
+            <h1 className="text-lg md:text-3xl font-bold text-center mb-8">Learn German - Video Tutorials</h1>
 
             <div className="flex flex-col lg:flex-row gap-6">
                 {/* Left Side - Video Player */}
                 <div className="lg:w-2/3">
-                    <div className="aspect-w-16 aspect-h-9 bg-base-100 rounded-lg shadow-xl overflow-hidden">
-                        <iframe
-                            src={currentVideo}
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="w-[1200px] h-[700px]"
-                        ></iframe>
+                    <div className="w-full relative overflow-hidden rounded-lg shadow-xl bg-black">
+                        <div
+                            className="w-full h-[250px] sm:h-[400px] md:h-[500px] lg:h-[600px]" // Adjust heights for different breakpoints
+                        >
+                            <iframe
+                                src={currentVideo}
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
                     </div>
 
                     <div className="mt-6 text-start">
                         <Link
                             to="/learn"
-                            className="btn btn-success btn-lg"
+                            className="btn btn-success text-white"
                         >
                             Learn Vocabularies
                         </Link>
