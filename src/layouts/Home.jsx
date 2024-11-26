@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div className="container mx-auto ">
             <section>
-                <div className="hero bg-[#FAFAFA] min-h-[600px]">
+                <div className="hero min-h-[600px]">
                     <div className="hero-content text-center">
                         <div className="max-w-2xl">
                             <video

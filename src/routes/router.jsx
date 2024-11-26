@@ -8,6 +8,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Tutorial from "../layouts/Tutorial";
+import About from "../layouts/About";
 
 const router = createBrowserRouter([
     {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <h1>About layout</h1>,
+                element: <About></About>
             },
             {
                 path: '/auth',
