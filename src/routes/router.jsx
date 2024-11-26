@@ -7,6 +7,7 @@ import Lesson from "../pages/Lesson";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import Tutorial from "../layouts/Tutorial";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/tutorial',
-                element: <h1>Tutorial layout</h1>,
+                element: <Tutorial></Tutorial>
             },
             {
                 path: '/about',
