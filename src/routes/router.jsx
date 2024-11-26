@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Tutorial from "../layouts/Tutorial";
 import About from "../layouts/About";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -26,11 +27,17 @@ const router = createBrowserRouter([
             },
             {
                 path: '/learn/:lesson_no',
-                element: <Lesson></Lesson>,
+                element:
+                    <PrivateRoute>
+                        <Lesson></Lesson>,
+                    </PrivateRoute>,
             },
             {
                 path: '/tutorial',
-                element: <Tutorial></Tutorial>
+                element:
+                    <PrivateRoute>
+                        <Tutorial></Tutorial>,
+                    </PrivateRoute>,
             },
             {
                 path: '/about',

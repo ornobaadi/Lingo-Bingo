@@ -1,15 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Signup = () => {
 
-    const { createNewUser, setUser } = useContext(AuthContext)
+    const { createNewUser, setUser } = useContext(AuthContext);
+    const [error, setError] = useState({})
     const handleSubmit = (e) => {
         e.preventDefault();
 
         const form = new FormData(e.target);
         const name = form.get('name');
+        if (name.length < 5) {
+            setError({ ...error, name: 'must be more than 5 character long' });
+            return;
+        }
         const photo = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
@@ -39,8 +44,14 @@ const Signup = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input name="name" type="text" placeholder="email" className="input input-bordered" required />
+                        <input name="name" type="text" placeholder="name" className="input input-bordered" required />
                     </div>
+                    {
+                        error.name &&
+                        <label className="label text-xs text-red-600">
+                            {error.name}
+                        </label>
+                    }
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">PhotoURL</span>
@@ -65,7 +76,7 @@ const Signup = () => {
                         <button className="btn btn-neutral">Sign Up</button>
                     </div>
                 </form>
-                <h2 className="text-center font-semibold"> Already have an Account? <Link className="text-red-500" to='/auth/login'>Login</Link> </h2>
+                <h2 className="text-center "> Already have an Account? <Link className="font-semibold link-hover" to='/auth/login'>Login</Link> </h2>
             </div>
         </div>
     );

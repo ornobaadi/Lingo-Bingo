@@ -1,25 +1,31 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
 
-    const {userLogin, setUser} = useContext(AuthContext)
+    const { userLogin, setUser } = useContext(AuthContext);
+    const [error, setError] = useState({});
+
+    const location = useLocation();
+    console.log(location);
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({email,password});
+        console.log({ email, password });
         userLogin(email, password)
-        .then(result => {
-            const user = result.user;
-            setUser(user);
-        })
-        .catch((error) =>{
-            alert(error.code);
-        })
+            .then(result => {
+                const user = result.user;
+                setUser(user);
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch((err) => {
+                setError({ ...error, login: err.code })
+            })
     }
 
 
@@ -40,6 +46,13 @@ const Login = () => {
                         </label>
                         <input name="password" type="password" placeholder="password" className="input input-bordered" required />
 
+                        {
+                            error.login && 
+                                <label className="label text-red-600 text-sm">
+                                    {error.login}
+                                </label>
+                        }
+
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
@@ -48,7 +61,7 @@ const Login = () => {
                         <button className="btn btn-neutral">Login</button>
                     </div>
                 </form>
-                <h2 className="text-center font-semibold"> Don&#39;t have an Account? <Link className="text-red-500" to='/auth/signup'>Sign Up</Link> </h2>
+                <h2 className="text-center"> Don&#39;t have an Account? <Link className="font-semibold link-hover" to='/auth/signup'>Sign Up</Link> </h2>
             </div>
         </div>
     );
