@@ -13,12 +13,21 @@ const Signup = () => {
         const form = new FormData(e.target);
         const name = form.get('name');
         if (name.length < 5) {
-            setError({ ...error, name: 'must be more than 5 character long' });
+            setError({ ...error, name: 'name must be more than 5 character long' });
             return;
         }
         const photo = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
+        if (password.length < 6 || 
+            !/[A-Z]/.test(password) || 
+            !/[a-z]/.test(password)) {
+            setError({ 
+                ...error, 
+                name: 'Password must be at least 6 characters long and include both uppercase and lowercase letters.' 
+            });
+            return;
+        }
         console.log({ name, photo, email, password });
 
         createNewUser(email, password)
@@ -53,12 +62,6 @@ const Signup = () => {
                         </label>
                         <input name="name" type="text" placeholder="name" className="input input-bordered" required />
                     </div>
-                    {
-                        error.name &&
-                        <label className="label text-xs text-red-600">
-                            {error.name}
-                        </label>
-                    }
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">PhotoURL</span>
@@ -71,14 +74,18 @@ const Signup = () => {
                         </label>
                         <input name="email" type="email" placeholder="email" className="input input-bordered" required />
                     </div>
-
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
                         <input name="password" type="password" placeholder="password" className="input input-bordered" required />
-
                     </div>
+                    {
+                        error.name &&
+                        <label className="label text-xs text-red-600">
+                            {error.name}
+                        </label>
+                    }
                     <div className="form-control mt-6">
                         <button className="btn btn-neutral">Sign Up</button>
                     </div>

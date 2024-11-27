@@ -1,8 +1,8 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, sendPasswordResetEmail, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
 
 const Login = () => {
@@ -11,6 +11,8 @@ const Login = () => {
     const [error, setError] = useState({});
     const location = useLocation();
     const navigate = useNavigate();
+
+    const emailRef = useRef();
 
     console.log("Location State:", location); // Debug to check what state is passed
 
@@ -27,6 +29,20 @@ const Login = () => {
                 setError({ ...error, google: error.message });
             });
     };
+
+    const handleForgetPassword = () => {
+        console.log('get me email', emailRef.current.value);
+        const email = emailRef.current.value;
+        if(!email){
+            console.log('Please provide a valid email');
+        }
+        else{
+            sendPasswordResetEmail(auth, email)
+            .then(() => {
+                alert('Password reset email sent, Please check your email')
+            })
+        }
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -53,7 +69,7 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input name="email" type="email" placeholder="email" className="input input-bordered" required />
+                        <input name="email" type="email" ref={emailRef}  placeholder="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -61,7 +77,7 @@ const Login = () => {
                         </label>
                         <input name="password" type="password" placeholder="password" className="input input-bordered" required />
                         {error.login && <label className="label text-red-600 text-sm">{error.login}</label>}
-                        <label className="label">
+                        <label onClick={handleForgetPassword} className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
