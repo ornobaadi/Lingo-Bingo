@@ -10,6 +10,9 @@ import Signup from "../pages/Signup";
 import Tutorial from "../layouts/Tutorial";
 import About from "../layouts/About";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "../layouts/Profile";
+import UpdateProfile from "../layouts/UpdateProfile";
+import ForgetPassword from "../pages/ForgetPassword";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +33,20 @@ const router = createBrowserRouter([
                 element:
                     <PrivateRoute>
                         <Lesson></Lesson>,
+                    </PrivateRoute>,
+            },
+            {
+                path: '/profile',
+                element:
+                    <PrivateRoute>
+                        <Profile></Profile>
+                    </PrivateRoute>,
+            },
+            {
+                path: '/update-profile',
+                element:
+                    <PrivateRoute>
+                        <UpdateProfile></UpdateProfile>
                     </PrivateRoute>,
             },
             {
@@ -54,6 +71,10 @@ const router = createBrowserRouter([
                     {
                         path: '/auth/signup',
                         element: <Signup></Signup>,
+                    },
+                    {
+                        path: '/auth/forget-password',
+                        element: <ForgetPassword></ForgetPassword>,
                     },
                 ]
             },

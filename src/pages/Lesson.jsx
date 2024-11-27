@@ -5,11 +5,11 @@ import { IoIosArrowBack } from "react-icons/io";
 const Lesson = () => {
     const { lesson_no } = useParams();
     const [vocabularies, setVocabularies] = useState([]);
-    const [selectedVocab, setSelectedVocab] = useState(null); // To handle modal data
+    const [selectedVocab, setSelectedVocab] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('/german.json') // Fetch lesson data
+        fetch('/german.json')
             .then((res) => res.json())
             .then((data) => {
                 const filteredData = data.filter((item) => item.lesson_no === Number(lesson_no));
@@ -25,7 +25,6 @@ const Lesson = () => {
         window.speechSynthesis.speak(utterance);
     };
 
-    // Dynamically assign card colors based on difficulty
     const getDifficultyClass = (difficulty) => {
         switch (difficulty) {
             case 'easy':
@@ -59,8 +58,8 @@ const Lesson = () => {
                             <button
                                 className="btn btn-success text-white btn-wide mt-2"
                                 onClick={(e) => {
-                                    e.stopPropagation(); // Prevent card click event
-                                    setSelectedVocab(vocab); // Open modal with vocab data
+                                    e.stopPropagation();
+                                    setSelectedVocab(vocab);
                                 }}
                             >
                                 When to say
@@ -72,7 +71,6 @@ const Lesson = () => {
                 )}
             </div>
 
-            {/* Back to Lessons Button */}
             <button
                 className="mt-8 btn btn-wide btn-success text-white flex items-center justify-center"
                 onClick={() => navigate('/learn')}
@@ -98,7 +96,7 @@ const Lesson = () => {
                         <div className="modal-action">
                             <button
                                 className="btn btn-error"
-                                onClick={() => setSelectedVocab(null)} // Close modal
+                                onClick={() => setSelectedVocab(null)}
                             >
                                 Close
                             </button>

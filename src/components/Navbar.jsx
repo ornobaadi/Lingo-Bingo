@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
-
     const { user, logOut } = useContext(AuthContext);
 
     const links = (
@@ -12,8 +11,10 @@ const Navbar = () => {
             <li><NavLink to='/learn'>Learn</NavLink></li>
             <li><NavLink to='/tutorial'>Tutorial</NavLink></li>
             <li><NavLink to='/about'>About</NavLink></li>
+            {user && (
+                <li><NavLink to='/profile'>My Profile</NavLink></li>
+            )}
         </>
-
     );
 
     return (
@@ -50,32 +51,19 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-2">
+                {user && user?.photoURL && (
+                    <img className="w-12 h-12 object-cover rounded-full" src={user.photoURL} alt="User" />
+                )}
 
-                {
-                    user && user?.email ?
-                        <div className="flex flex-col items-center">
-                            <img className="w-12 h-12 object-cover rounded-full" src={user?.photoURL} alt="" />
-                            <p className="font-semibold">{user.displayName}</p>
-                        </div>
-                        :
-                        <div className="avatar">
-                            <div className="">
-                            
-                            </div>
-                        </div>
-                }
-
-                {/* <h2 className="font-semibold text-error">{user && user.email}</h2> */}
-
-                {
-                    user && user?.email ?
-                        <button onClick={logOut} className="btn btn-sm md:btn-md btn-outline rounded-box px-5 md:px-10">Logout</button>
-                        :
-                        <Link to='/auth/login'><a className="btn btn-sm md:btn-md btn-outline rounded-box px-5 md:px-10">Login</a></Link>
-                }
-
-
-
+                {user && user?.email ? (
+                    <button onClick={logOut} className="btn btn-sm md:btn-md btn-outline rounded-box px-5 md:px-10">
+                        Logout
+                    </button>
+                ) : (
+                    <Link to='/auth/login'>
+                        <a className="btn btn-sm md:btn-md btn-outline rounded-box px-5 md:px-10">Login</a>
+                    </Link>
+                )}
             </div>
         </div>
     );
