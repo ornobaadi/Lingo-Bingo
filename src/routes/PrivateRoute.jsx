@@ -14,6 +14,11 @@ const PrivateRoute = ({children}) => {
         return <Loading></Loading>
     }
 
+    if (!user) {
+        // Redirect to login and pass the current location in state
+        return <Navigate to="/auth/login" state={{ from: location.pathname }} replace />;
+    }
+
     if(user && user?.email){
         return children;
     }
