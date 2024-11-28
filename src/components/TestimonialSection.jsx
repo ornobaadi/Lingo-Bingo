@@ -95,7 +95,7 @@ const testimonials = [
 
 export default function TestimonialSection() {
     return (
-        <section className="py-10 px-5 md:px-20" data-aos="fade-up">
+        <section className="py-20 px-5 md:px-20" data-aos="fade-up">
             <div className="text-center mb-6 md:mb-10">
                 <h2 className="text-2xl md:text-3xl font-bold mb-2">
                     Hear what our amazing{" "}

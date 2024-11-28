@@ -5,7 +5,7 @@ const SuccessNumbers = () => {
     return (
         <div>
             <section className="py-20 bg-gray-50 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-5" data-aos="fade-up">
+                <h2 className="text-3xl md:text-4xl font-bold mb-10" data-aos="fade-up">
                     Our Success So Far
                 </h2>
                 <div className="flex justify-around flex-col md:flex-row gap-10">

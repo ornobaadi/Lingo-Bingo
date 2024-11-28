@@ -7,6 +7,7 @@ import Banner from '../components/Banner';
 import HomeAbout from '../components/HomeAbout';
 import SuccessNumbers from '../components/SuccessNumbers';
 import TestimonialSection from '../components/TestimonialSection';
+import FAQ from '../components/FAQ';
 
 const Home = () => {
     useEffect(() => {
@@ -21,6 +22,7 @@ const Home = () => {
             <HomeAbout></HomeAbout>
             <SuccessNumbers></SuccessNumbers>
             <TestimonialSection></TestimonialSection>
+            <FAQ></FAQ>
         </div>
     );
 };
