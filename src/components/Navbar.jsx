@@ -43,7 +43,7 @@ const Navbar = () => {
                 </div>
 
                 <Link to='/'><a className="btn p-0 btn-ghost text-md md:text-xl">
-                    <img className="w-10" src="/Bonjour.png" alt="" />Lingo Bingo</a></Link>
+                    <img className="w-10" src="/Bonjour.webp" alt="" />Lingo Bingo</a></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-5">

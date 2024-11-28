@@ -41,7 +41,8 @@ const Lesson = () => {
     return (
         <div className="container mx-auto p-10">
             {/* Page Title */}
-            <h1 className="text-4xl font-bold text-center mb-8">Lesson {lesson_no}</h1>
+            <h1 className="text-4xl font-bold text-center mb-2">Lesson {lesson_no}</h1>
+            <p className='italic text-center mb-8'>Click on cards to hear pronunciation</p>
 
             {/* Vocabulary Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -53,8 +54,9 @@ const Lesson = () => {
                             onClick={() => pronounceWord(vocab.word, 'de-DE')}
                         >
                             <h2 className="text-2xl font-semibold">{vocab.word}</h2>
-                            <p className="text-lg">{vocab.meaning}</p>
-                            <p className="italic text-sm mb-2">{vocab.part_of_speech}</p>
+                            <p className="text-md">({vocab.pronunciation})</p>
+                            <p className="text-lg mt-2">{vocab.meaning}</p>
+                            <p className="italic text-xs mb-2">{vocab.part_of_speech}</p>
                             <button
                                 className="btn btn-success text-white btn-wide mt-2"
                                 onClick={(e) => {

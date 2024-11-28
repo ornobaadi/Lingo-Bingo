@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/Bonjour.png" alt="Lingo Bingo Logo">
+  <img src="public/Bonjour.webp" alt="Lingo Bingo Logo">
 </div>
 
 
