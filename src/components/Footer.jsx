@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="footer footer-center text-lg bg-gray-50 text-base-content rounded p-10">
+            <aside>
+                <img className="w-24" src="/Bonjour.webp" alt="" />
+                <p className="font-bold">
+                    Lingo Bingo </p>
+                <p className="font-medium">A Vocabulary Learning Application</p>
+            </aside>
             <nav className="flex flex-wrap justify-center gap-5 md:gap-10">
                 <Link to="/" className="hover:text-success hover:font-semibold">Home</Link>
                 <Link to="/learn" className="hover:text-success hover:font-semibold">Learn</Link>

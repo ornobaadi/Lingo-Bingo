@@ -91,6 +91,9 @@ const Login = () => {
                             Sign Up
                         </Link>
                     </h2>
+                    <div>
+                        <h2 className="text-center font-medium">Or</h2>
+                    </div>
                     {error.google && (
                         <label className="label text-red-600 text-sm">{error.google}</label>
                     )}

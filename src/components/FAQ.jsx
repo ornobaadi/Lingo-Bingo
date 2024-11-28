@@ -3,7 +3,7 @@ const FAQ = () => {
         <section className="py-10 px-5 md:px-20" data-aos="fade-up">
             <div className="text-center mb-10">
                 <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                    Frequently Asked <span className="text-lime-500 underline decoration-2">Questions</span>
+                    Frequently Asked <span className="text-lime-600 decoration-2">Questions</span>
                 </h2>
                 <p className="text-gray-600">Find answers to common questions about Lingo Bingo</p>
             </div>

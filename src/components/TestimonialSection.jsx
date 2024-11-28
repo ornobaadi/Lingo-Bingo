@@ -99,7 +99,7 @@ export default function TestimonialSection() {
             <div className="text-center mb-6 md:mb-10">
                 <h2 className="text-2xl md:text-3xl font-bold mb-2">
                     Hear what our amazing{" "}
-                    <span className="text-lime-500 underline decoration-2">users</span> say
+                    <span className="text-lime-600 decoration-2">Users</span> say
                 </h2>
             </div>
 

@@ -5,7 +5,7 @@ const HomeAbout = () => {
         <section className="py-20 px-5 md:px-20 bg-gray-50">
             <div className="text-center mb-10">
                 <h2 className="text-3xl md:text-4xl font-bold mb-5" data-aos="fade-up">
-                    Empower Your Language Learning Journey
+                <span className="text-lime-600 decoration-2">Empower</span> Your Language Learning Journey
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-10 mx-auto max-w-4xl" data-aos="fade-up" data-aos-delay="100">
                     At Lingo Bingo, we provide interactive tools designed to help you master new languages with ease. 

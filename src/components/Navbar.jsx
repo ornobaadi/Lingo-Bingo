@@ -18,7 +18,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar mt-5">
+        <div className={`navbar bg-base-100/70 z-50 sticky top-0 backdrop-blur-lg`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -52,7 +52,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-2">
                 {user && user?.photoURL && (
-                    <Link to='/profile'><img className="w-8 h-8 md:h-12 md:w-12  object-cover rounded-full" src={user.photoURL} alt="User" /></Link>
+                    <Link to='/profile' className="flex items-center gap-4">
+                        <h2 className="hidden md:inline text-sm font-semibold">Welcome, <span className="text-success">{user?.displayName}</span></h2>
+                        <img className="w-8 h-8 md:h-12 md:w-12 object-cover rounded-full" src={user.photoURL} alt="User" /></Link>
                 )}
 
                 {user && user?.email ? (
