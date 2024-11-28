@@ -29,7 +29,7 @@ const ForgetPassword = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-50">
+        <div className="min-h-screen flex items-center justify-center ">
             <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
                 <h2 className="text-2xl font-semibold text-center mb-4">Reset Your Password</h2>
                 <div className="form-control">

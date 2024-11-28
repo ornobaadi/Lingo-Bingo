@@ -1,5 +1,5 @@
 import ReactCountryFlag from "react-country-flag";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Learn = () => {
     const navigate = useNavigate();
@@ -117,7 +117,15 @@ const Learn = () => {
                             </div>
                         </div>
                     ))}
+                    <div className="mt-6 text-start">
+                    </div>
                 </div>
+                        <Link
+                            to="/tutorial"
+                            className="btn btn-success mt-5 text-white"
+                        >
+                            View More
+                        </Link>
             </div>
         </div>
     );

@@ -47,7 +47,7 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-[700px] flex justify-center items-center">
+        <div className="min-h-screen flex justify-center items-center">
             <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10 ">
                 <h2 className="text-2xl font-semibold text-center">Login to your account</h2>
                 <form onSubmit={handleSubmit} className="card-body">
@@ -95,7 +95,7 @@ const Login = () => {
                         <label className="label text-red-600 text-sm">{error.google}</label>
                     )}
                 </form>
-                <button onClick={handleGoogleSignIn} className="btn w-[368px] mx-auto">
+                <button onClick={handleGoogleSignIn} className="btn btn-wide md:w-[368px] mx-auto">
                     <FaGoogle /> Login with Google
                 </button>
             </div>
