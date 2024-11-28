@@ -12,13 +12,13 @@ const Footer = () => {
             </nav>
             <div className="flex justify-center gap-5 text-2xl md:text-3xl mt-5">
                 <Link to="https://www.facebook.com/">
-                    <FaFacebook />
+                    <FaFacebook className="hover:text-blue-700" />
                 </Link>
                 <Link to="https://www.instagram.com/">
-                    <FaInstagram />
+                    <FaInstagram className="hover:text-pink-500" />
                 </Link>
                 <Link to="https://www.github.com/">
-                    <FaGithub />
+                    <FaGithub className="hover:text-slate-600" />
                 </Link>
             </div>
             <aside className="text-sm mt-5">

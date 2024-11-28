@@ -31,7 +31,7 @@ const UpdateProfile = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center py-12">
-            <div className="w-full max-w-md bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <div className="w-full max-w-lg bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
                 <div className="px-8 py-6">
                     <h2 className="text-2xl font-semibold text-slate-800 text-center mb-6">
                         Update Profile Information

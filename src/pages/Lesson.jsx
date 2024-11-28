@@ -93,9 +93,9 @@ const Lesson = () => {
                         <p>
                             <strong>Example:</strong> {selectedVocab.example}
                         </p>
-                        <div className="modal-action">
+                        <div className="modal-action justify-center">
                             <button
-                                className="btn btn-error"
+                                className="btn btn-wide btn-neutral "
                                 onClick={() => setSelectedVocab(null)}
                             >
                                 Close

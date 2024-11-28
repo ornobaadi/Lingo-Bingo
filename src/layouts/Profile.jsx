@@ -7,7 +7,7 @@ const Profile = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center py-12">
-            <div className="w-full max-w-md bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <div className="w-full max-w-lg bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
                 {/* Profile Header */}
                 <div className="flex flex-col items-center p-8 space-y-4">
                     {user?.photoURL ? (
