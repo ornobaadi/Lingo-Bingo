@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.ibb.co.com/DQj2NFC/Lingo-Bingo.png" alt="Lingo Bingo Logo">
+  <img src="/Lingo-Bingo-Mockup.png" alt="Lingo Bingo Logo">
 </div>
 
 
@@ -11,6 +11,8 @@ Lingo Bingo is a fun and interactive language learning platform designed to make
 
 ## 🌐 Live URL  
 🔗 [Visit Lingo Bingo](https://lingo-bingo-ornobaadi.surge.sh)  
+
+[Firebase Alt Live Link](https://lingo-bingo-6af61.web.app/)
 
 ---
 
