@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer footer-center text-lg bg-gray-50 text-base-content rounded p-10">
             <aside>
                 <img className="w-24" src="/Bonjour.webp" alt="" />
-                <p className="font-bold">
+                <p className="text-3xl font-bold py-2">
                     Lingo Bingo </p>
                 <p className="font-medium">A Vocabulary Learning Application</p>
             </aside>

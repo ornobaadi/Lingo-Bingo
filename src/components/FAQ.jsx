@@ -11,7 +11,7 @@ const FAQ = () => {
             <div className="mx-auto space-y-4">
                 <div className="collapse collapse-arrow bg-base-200" data-aos="fade-up" data-aos-delay="400">
                     <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-xl font-semibold">
                         How does Lingo Bingo make language learning fun?
                     </div>
                     <div className="collapse-content">
@@ -28,7 +28,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200" data-aos="fade-up" data-aos-delay="400">
                     <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-xl font-semibold">
                         Which languages are available on Lingo Bingo?
                     </div>
                     <div className="collapse-content">
@@ -45,7 +45,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200" data-aos="fade-up" data-aos-delay="400">
                     <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-xl font-semibold">
                         What subscription plans do you offer?
                     </div>
                     <div className="collapse-content">
@@ -61,7 +61,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200" data-aos="fade-up" data-aos-delay="400">
                     <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-xl font-semibold">
                         How effective is Lingo Bingo for language learning?
                     </div>
                     <div className="collapse-content">
@@ -78,7 +78,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200" data-aos="fade-up" data-aos-delay="400">
                     <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-xl font-semibold">
                         Can I learn multiple languages simultaneously?
                     </div>
                     <div className="collapse-content">
@@ -95,7 +95,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200" data-aos="fade-up" data-aos-delay="400">
                     <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-xl font-semibold">
                         How does the community feature work?
                     </div>
                     <div className="collapse-content">
