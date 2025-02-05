@@ -1,45 +1,98 @@
+
 <div align="center">
-  <img src="/Lingo-Bingo-Mockup.png" alt="Lingo Bingo Logo">
+  <img src="public/Lingo-Bingo-Mockup.png" alt="Lingo Bingo Mockup" width="600">
 </div>
 
+# 🌟 **Lingo Bingo: A Vocabulary Learning Application** 🌟
 
-# 🌟 Lingo Bingo: A Vocabulary Learning Application 🌟
-
-Lingo Bingo is a fun and interactive language learning platform designed to make vocabulary acquisition engaging and enjoyable. Whether you're a beginner or looking to refine your skills, Lingo Bingo has something for everyone! 🎉
-
----
-
-## 🌐 Live URL  
-🔗 [Visit Lingo Bingo](https://lingo-bingo-ornobaadi.surge.sh)  
-
-[Firebase Alt Live Link](https://lingo-bingo-6af61.web.app/)
+**Lingo Bingo** is a fun and interactive language learning platform designed to make vocabulary acquisition engaging and enjoyable. Whether you're a beginner or looking to refine your skills, Lingo Bingo has something for everyone! 🎉
 
 ---
 
-## 🎯 Purpose  
-Lingo Bingo helps users overcome the challenge of retaining vocabulary by offering an easy-to-use and interactive learning experience. With lessons, tutorials, and engaging features, mastering a new language has never been this fun! 🚀
+## 🌐 **Live Demo**
+
+- 🔗 [Visit Lingo Bingo](https://lingo-bingo-ornobaadi.surge.sh)  
+- 🔗 [Firebase Hosted Link](https://lingo-bingo-6af61.web.app/)
 
 ---
 
-## ✨ Key Features  
-- 🔑 **Firebase Authentication**: Secure login and registration with Google social login.  
-- 🗂️ **Dynamic Lessons**: Explore lessons with vocabulary cards categorized by difficulty.  
-- 🛠️ **Update Profile**: Edit profile details like name and photo directly.  
-- 🎥 **Embedded Tutorials**: Watch curated YouTube videos for immersive learning.  
-- 🎨 **Interactive Design**: Animations powered by AOS for an engaging user experience.  
-- 🗣️ **Vocabulary Pronunciation**: Hear the pronunciation of words directly.  
-- 🔁 **Private Routes**: Seamless access to private routes without login redirection on reload.  
-- 📈 **Responsive Design**: Fully optimized for mobile, tablet, and desktop.  
+## 🎯 **Overview**
+
+Lingo Bingo helps users overcome the challenge of retaining vocabulary by offering an easy-to-use and interactive learning experience. With dynamic lessons, interactive tutorials, and engaging features, mastering a new language has never been this fun! 🚀
 
 ---
 
-## 📦 NPM Packages Used  
-- **React Router DOM**: For seamless navigation.  
-- **React Firebase Hooks**: Simplified Firebase integration.  
-- **Firebase**: For authentication and database services.  
-- **React Hot Toast**: User-friendly toast notifications.  
-- **React Count Up**: Animated success counters.  
-- **AOS**: Scroll animations for an engaging interface.  
+## ✨ **Core Features**
+
+- 🔑 **Firebase Authentication**: Secure login and registration with Google social login.
+- 🗂️ **Dynamic Lessons**: Vocabulary cards categorized by difficulty.
+- 🛠️ **Profile Management**: Update name and profile picture directly in the app.
+- 🎥 **Embedded Tutorials**: Curated YouTube videos for immersive learning.
+- 🎨 **Interactive UI**: Smooth animations powered by AOS.
+- 🗣️ **Pronunciation Feature**: Hear correct pronunciations of vocabulary words.
+- 🔁 **Private Routes**: Seamless navigation with protected routes.
+- 📈 **Responsive Design**: Optimized for mobile, tablet, and desktop devices.
+
+---
+
+## 📦 **Dependencies**
+
+- **React Router DOM**: For navigation and routing.
+- **React Firebase Hooks**: Simplifies Firebase integration.
+- **Firebase**: Handles authentication and database services.
+- **React Hot Toast**: Displays sleek toast notifications.
+- **React Count Up**: Adds animated counters.
+- **AOS (Animate On Scroll)**: Provides scroll-based animations.
+
+---
+
+## 🛠️ **Getting Started**
+
+Follow these steps to run **Lingo Bingo** locally on your machine:
+
+1. **Clone the Repository**  
+   ```bash
+   https://github.com/ornobaadi/Lingo-Bingo.git
+   ```
+
+2. **Navigate to the Project Directory**  
+   ```bash
+   cd Lingo-Bingo
+   ```
+
+3. **Install Dependencies**  
+   ```bash
+   npm install
+   ```
+
+4. **Set Up Environment Variables**  
+   Create a `.env` file in the root directory and add your Firebase configuration:
+   ```env
+   VITE_API_KEY=your_firebase_api_key
+   VITE_AUTH_DOMAIN=your_project_auth_domain
+   VITE_PROJECT_ID=your_project_id
+   VITE_STORAGE_BUCKET=your_storage_bucket
+   VITE_MESSAGING_SENDER_ID=your_messaging_sender_id
+   VITE_APP_ID=your_app_id
+   ```
+
+5. **Start the Development Server**  
+   ```bash
+   npm run dev
+   ```
+
+6. **View the Application**  
+   Open your browser and go to [http://localhost:5173](http://localhost:5173).
+
+---
+
+
+## 🔗 **Additional Resources**
+
+- [Live Project on Surge](https://lingo-bingo-ornobaadi.surge.sh)
+- [Firebase Hosted Link](https://lingo-bingo-6af61.web.app)
+- [React Documentation](https://reactjs.org/)
+- [Firebase Documentation](https://firebase.google.com/docs)
 
 ---
 
