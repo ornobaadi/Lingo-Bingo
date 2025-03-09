@@ -17,7 +17,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="container mx-auto bg-gray-50">
+        <div className="container mx-auto">
             <Banner></Banner>
             <HomeAbout></HomeAbout>
             <SuccessNumbers></SuccessNumbers>

@@ -2,7 +2,7 @@ import { BookCheck, Earth, FlaskConical } from "lucide-react";
 
 const HomeAbout = () => {
     return (
-        <section className="py-20 px-5 md:px-20 bg-gray-50">
+        <section className="py-20 px-5 md:px-20">
             <div className="text-center mb-10">
                 <h2 className="text-3xl md:text-4xl font-bold mb-5" data-aos="fade-up">
                 <span className="text-lime-600 decoration-2">Empower</span> Your Language Learning Journey

@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <div>
             <section>
-                <div className="hero min-h-[600px] bg-[#FAFAFA]">
+                <div className="hero min-h-[600px]">
                     <div className="hero-content text-center">
                         <div className="max-w-2xl" data-aos="fade-up">
                             <video autoPlay playsinline loop muted src="/Language.mp4"></video>

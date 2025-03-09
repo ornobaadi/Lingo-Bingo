@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center text-lg bg-gray-50 text-base-content rounded p-10">
+        <footer className="footer footer-center text-lg  text-base-content rounded p-10">
             <aside>
                 <img className="w-24" src="/Bonjour.webp" alt="" />
                 <p className="text-3xl font-bold py-2">

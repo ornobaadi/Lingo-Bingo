@@ -4,7 +4,7 @@ import { FaBookOpen, FaLanguage, FaPlayCircle, FaUsers } from "react-icons/fa";
 const SuccessNumbers = () => {
     return (
         <div>
-            <section className="py-20 bg-gray-50 text-center">
+            <section className="py-20 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-10" data-aos="fade-up">
                     Our <span className="text-lime-600 decoration-2">Success</span> So Far
                 </h2>
